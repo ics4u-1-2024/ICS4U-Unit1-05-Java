@@ -14,9 +14,9 @@ final class Main {
      *
      * @param args nothing passed in
      */
-    public static float calculateArea(int radius) {
+    public static double calculateArea(int radius) {
         // process
-        float area = Math.PI * Math.pow(radius, 2);
+        double area = Math.PI * Math.pow(radius, 2);
 
         return area;
     }
@@ -33,22 +33,24 @@ final class Main {
      *
      * @param args nothing passed in
      */
-    public static float main(final String[] args) {
+    public static void main(final String[] args) {
         int radius;
-        float area = 0.0;
+        double area = 0.0;
 
         // input
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the radius of a circle (cm): ");
         radius = scanner.nextInt();
+        scanner.close();
         System.out.println();
 
         // call functions
         area = calculateArea(radius);
 
         // output
-        System.out.printf("The area is %d cm²%n", area);
+        System.out.printf("The area is %f cm²%n", area);
 
         System.out.println("\nDone.");
     }
 }
+
